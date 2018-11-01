@@ -17,7 +17,6 @@
 
 body {
   font-family: 'mibd', sans-serif;
-  text-transform: uppercase;
 }
 
 h1,
@@ -25,6 +24,7 @@ h3,
 h4 {
   text-transform: uppercase;
   color: white;
+  letter-spacing: .35px;
 }
 
 .container {
@@ -87,19 +87,20 @@ h4 {
 .cta svg {
   width: 10px;
   fill: white;
+  margin-right: 5px;
 }
 
 .cta {
+  border: 0;
   align-items: center;
-  max-width: 140px;
+  min-width: 140px;
   padding: 10px;
   background-color: black;
-}
-
-.cta p {
-  padding-left: 5px;
   color: white;
   font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'mibd', sans-serif;
+  letter-spacing: .35px;
 }
 
 .bottom .logo {
@@ -125,17 +126,21 @@ h4 {
 
 .car {
   width: 100%;
-  top: 50px;
-  left: -2px;
+  top: 55px;
+  left: 0;
   z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
 }
 
 .car img {
-  width: 100%;
+  max-width: 95%;
+  position: relative;
 }
 
 .frame.logo {
-  /* z-index: 10; */
   background: black;
   display: flex;
   justify-content: center;
@@ -143,8 +148,7 @@ h4 {
   border: 8px solid var(--blue);
 }
 
-.final {
-  /* z-index: 1; */
+.frame.final {
   background: black;
   display: flex;
   border: 8px solid var(--blue);
@@ -152,6 +156,11 @@ h4 {
 
 .color-switcher {
   width: 100%;
+  flex-direction: column;
+}
+
+.color-switcher .colors-wrapper {
+  margin: 8px 0;
 }
 
 .color-switcher .colors {
@@ -160,11 +169,21 @@ h4 {
   min-width: 85px;
 }
 
-.color-switcher .colors>div {
+.color-switcher .colors>.select {
   width: 20px;
   height: 20px;
 }
 
-.color-switcher .colors>div.active {
+.color-switcher .colors>.select.active {
   border: 1px solid white;
+}
+
+.color-switcher .cars-wrapper {
+  position: relative;
+}
+
+.color-switcher .cars-wrapper>img {
+  max-width: 100%;
+  position: absolute;
+  top: 5px
 }
