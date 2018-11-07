@@ -13,44 +13,44 @@
     <div class="banner-wrapper">
       <div class="frame blue">
         <div class="heading">
-          <h3>the new</h3>
-          <h1>mini cooper s.</h1>
+          <h3 class="el">the new</h3>
+          <h1 class="el">mini cooper s.</h1>
         </div>
       </div>
       <div class="frame yellow">
         <div class="heading">
-          <h3>small car</h3>
-          <h1>big pleasure</h1>
+          <h3 class="word">small car</h3>
+          <h1 class="word">big pleasure</h1>
         </div>
       </div>
       <div class="frame red">
         <div class="heading">
-          <h3>small car</h3>
-          <h1>big pleasure</h1>
+          <h3 class="word2">small car</h3>
+          <h1 class="word2">big pleasure</h1>
         </div>
       </div>
       <div class="frame logo">
-          <img src="./assets/mini_logo.png">
+          <img src="./assets/images/mini_logo.png">
       </div>
       <div class="frame final">
         <div class="color-switcher flex">
           <div class="colors-wrapper flex">
             <h4>Change color</h4>
             <div class="colors flex">
-              <div class="select blue active"> </div>
-              <div class="select yellow"> </div>
-              <div class="select red"> </div>
+              <div class="select blue active" data-color="blue"> </div>
+              <div class="select yellow" data-color="yellow"> </div>
+              <div class="select red" data-color="red"> </div>
             </div>
           </div>
           <div class="cars-wrapper">
-            <img src="./assets/mini_front_colors_blue.png">
-            <img src="./assets/mini_front_colors_yellow.png">
-            <img src="./assets/mini_front_colors_red.png">
+            <img src="./assets/images/mini_front_colors_blue.png" class="color-car selected" data-color="blue">
+            <img src="./assets/images/mini_front_colors_yellow.png" class="color-car" data-color="yellow">
+            <img src="./assets/images/mini_front_colors_red.png" class="color-car" data-color="red">
           </div>
         </div>
       </div>
       <div class="car">
-        <img src="./assets/Cooper-S1.png">
+        <img src="./assets/images/Cooper-S1.png">
       </div>
       <div class="bottom flex">
         <button class="cta flex">
@@ -58,17 +58,17 @@
             <path d="M0 0l11.482 11.474L0 22.949h8.589l11.482-11.475L8.589 0z"/>
             <path d="M10.871 0l11.483 11.474-11.483 11.475h8.589l11.482-11.475L19.46 0z"/>
           </svg>
-          Explore now.
+         <span>Explore now.</span>
         </button>
-        <div class="logo"><img src="./assets/mini_logo.png"></div>
+        <div class="logo"><img src="./assets/images/mini_logo.png"></div>
 
       </div>
     </div>
 
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   <script src='./js/main.js'></script>
 </body>
 </html>

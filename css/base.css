@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'mibd';
-  src: url('../assets/fonts/mibd.ttf') format('truetype');
+  src: url('../assets/fonts/mibd-webfont.woff2') format('woff2'), url('../assets/fonts/mibd-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -76,7 +76,7 @@ h4 {
   width: 100%;
   left: 0;
   padding: 10px;
-  z-index: 9;
+  z-index: 5;
 }
 
 .frame>div,
@@ -88,6 +88,7 @@ h4 {
   width: 10px;
   fill: white;
   margin-right: 5px;
+  position: relative;
 }
 
 .cta {
@@ -97,10 +98,12 @@ h4 {
   padding: 10px;
   background-color: black;
   color: white;
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
   font-family: 'mibd', sans-serif;
   letter-spacing: .35px;
+  position: relative;
+  padding-bottom: 8px;
 }
 
 .bottom .logo {
@@ -128,11 +131,10 @@ h4 {
   width: 100%;
   top: 55px;
   left: 0;
-  z-index: 9;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
 }
 
 .car img {
@@ -182,8 +184,38 @@ h4 {
   position: relative;
 }
 
-.color-switcher .cars-wrapper>img {
+img.color-car {
   max-width: 100%;
   position: absolute;
-  top: 5px
+  top: 5px;
+}
+
+img.color-car.selected {
+  visibility: visible;
+  z-index: 10;
+}
+
+.frame {
+  opacity: 0;
+}
+
+.frame.blue {
+  opacity: 1;
+}
+
+/*button hover neon effect */
+
+.cta:hover {
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon 1.5s ease-in-out infinite alternate;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
 }
